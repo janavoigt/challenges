@@ -236,6 +236,23 @@ fairly essential to completing this challenge. */
   color: var(--eggshell-white);
 }
 
+@media screen and (min-width: 820px) {
+  .main-section {
+    display: flex;
+  }
+
+  .card-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .card-section article,
+  .card-section p {
+    width: 350px;
+  }
+}
+
 /* ==[ MEDIA QUERIES & BREAKPOINTS ]== */
 
 /* Now it's your turn! Here we're using media queries to partially overwrite our
