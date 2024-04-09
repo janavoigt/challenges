@@ -67,6 +67,8 @@ body {
 }
 
 .element-1 {
+  grid-column-start: 3;
+  grid-column-end: 5;
   /* Add styles here */
 }
 
