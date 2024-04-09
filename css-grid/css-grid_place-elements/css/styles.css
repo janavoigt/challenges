@@ -58,11 +58,11 @@ body {
 .element-1 {
   grid-row: 2;
   grid-column: 3 / span 3;
-  /* Add styles here */
 }
 
 .element-2 {
-  grid-column: 5 / 10;
+  grid-row: 2;
+  grid-column: 5 / 5;
   /* Add styles here */
 }
 
@@ -79,7 +79,7 @@ body {
 
 .element-spiced {
   grid-row-start: 1;
-  grid-row-end: -10;
+  grid-column: 1 / span 10;
   /* Add styles here */
 }
 
