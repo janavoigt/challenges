@@ -16,10 +16,17 @@ body {
 
 .image-board__container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 300px 200px 300px;
+  grid-auto-flow: column;
+  grid-template-areas:
+    "a b c"
+    "d b f"
+    "d e f";
+
   gap: 1rem;
   padding: 1rem;
+
   /* Add styles here */
 }
 
@@ -32,25 +39,31 @@ body {
 }
 
 .image-board__image--1 {
+  grid-area: a;
   /* Add styles here */
 }
 
 .image-board__image--2 {
+  grid-area: b;
   /* Add styles here */
 }
 
 .image-board__image--3 {
+  grid-area: c;
   /* Add styles here */
 }
 
 .image-board__image--4 {
+  grid-area: d;
   /* Add styles here */
 }
 
 .image-board__image--5 {
+  grid-area: e;
   /* Add styles here */
 }
 
 .image-board__image--6 {
+  grid-area: f;
   /* Add styles here */
 }
