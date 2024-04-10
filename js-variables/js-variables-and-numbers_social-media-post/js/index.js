@@ -10,7 +10,23 @@ console.clear();
 */
 
 // --v-- write your code here --v--
-
+const title = " ";
+const text = " ";
+let numerOfLikes = 45;
+const whoCreatedPost = " ";
+const isReported = false;
+console.log(
+  "title: ",
+  title,
+  "text",
+  text,
+  "numberLikes:",
+  numerOfLikes,
+  "boolean:",
+  isReported,
+  "who create the post",
+  whoCreatedPost
+);
 // --^-- write your code here --^--
 
 /*
@@ -18,5 +34,18 @@ console.clear();
 */
 
 // --v-- write your code here --v--
-
+numerOfLikes += 1;
+numerOfLikes += 1;
+console.log(
+  "title: ",
+  title,
+  "text",
+  text,
+  "numberLikes:",
+  numerOfLikes,
+  "boolean:",
+  isReported,
+  "who create the post",
+  whoCreatedPost
+);
 // --^-- write your code here --^--
