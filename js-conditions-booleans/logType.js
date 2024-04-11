@@ -1,5 +1,5 @@
 console.log("Which is the typeof data:");
-let data = null;
+let data = [8];
 
 switch (typeof data) {
   case "undefined":
