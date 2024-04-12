@@ -9,6 +9,15 @@ console.clear();
 */
 
 // --v-- write your code here --v--
+let titleOfBook = "The Lord of the Javascript";
+let authorOfBook = "Mario";
+let rating = 4.6;
+let numberSales = 220;
+
+/*console.log("Title:", titleOfBook);
+console.log("Author:", authorOfBook);
+console.log("Rating:", rating);
+console.log("Sales:", numberSales);*/
 
 // --^-- write your code here --^--
 
@@ -25,8 +34,11 @@ Then log all variables to the console again.
 */
 
 // --v-- write your code here --v--
-
-// --^-- write your code here --^--
+console.log("Title:", titleOfBook);
+console.log("Author:", authorOfBook);
+console.log("Rating:", rating);
+console.log("Sales:", numberSales);
+// --^-- write your code here --^--*/
 
 /*
 3: This code is quite repetitive and hard to read.
@@ -37,5 +49,13 @@ Then log all variables to the console again.
 */
 
 // --v-- write your code here --v--
-
+function logBookData(rating, numberSales) {
+  console.log("Title:", titleOfBook);
+  console.log("Author:", authorOfBook);
+  console.log("Rating:", rating);
+  console.log("Sales:", numberSales);
+}
+logBookData(4.8, 310);
+logBookData(4.6, 350);
+logBookData(4.8, 410);
 // --^-- write your code here --^--
