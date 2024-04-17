@@ -21,6 +21,12 @@ select.name = "languages";
 main.append(select);
 
 // --v-- write/change code here --v--
+for (const key in languages) {
+  let option = document.createElement("option");
+  option.textContent = languages[key];
+  option.value = key;
+  select.append(option);
+}
 
 // --^-- write/change code here --^--
 
@@ -39,4 +45,10 @@ navElement.append(ul);
 
 // --v-- write/change code here --v--
 
+for (const key in nav) {
+  let newItems = document.createElement("a");
+  newItems.textContent = nav[key]["text"];
+  newItems.setAttribute("href", nav[key]["href"]);
+  ul.append(newItems);
+}
 // --^-- write/change code here --^--
