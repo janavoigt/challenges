@@ -30,8 +30,8 @@ queryInput.addEventListener("input", (event) => {
 
   let foundCountries = result;
 
-  for (const countName of foundCountries) {
+  foundCountries.forEach((countName) => {
     const countryElement = Country(countName);
     container.append(countryElement);
-  }
+  });
 });
