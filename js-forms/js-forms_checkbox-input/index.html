@@ -32,6 +32,7 @@
             name="firstName"
             id="first-name"
             placeholder="Your first name"
+            value="Alex"
           />
 
           <label for="last-name">Last Name</label>
@@ -40,6 +41,7 @@
             name="lastName"
             id="last-name"
             placeholder="Your last name"
+            value="Smith"
           />
 
           <label for="age">Age</label>
@@ -88,7 +90,7 @@
           <input type="date" name="orderDate" id="order-date" />
 
           <label for="tos">
-            <input type="checkbox" name="tos" id="tos" />
+            <input type="checkbox" name="tos" id="tos" data-js="tos" />
             I have read the terms of service and agree to sell my soul
             <a
               href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
@@ -98,19 +100,15 @@
               (click here for more info)
             </a>
           </label>
+          <div data-js="tos-error" class="error">
+            Please agree to our terms of service to continue.
+          </div>
+          <div data-js="success" class="success">
+            Complaint successfully submitted!
+          </div>
         </fieldset>
 
         <button type="submit">Complain now!</button>
-        <button type="button" data-js="bt0">0</button>
-        <button type="button" data-js="bt1">1</button>
-        <button type="button" data-js="bt2">2</button>
-        <button type="button" data-js="bt3">3</button>
-        <button type="button" data-js="bt4">4</button>
-        <button type="button" data-js="bt5">5</button>
-        <button type="button" data-js="bt6">6</button>
-        <button type="button" data-js="bt7">7</button>
-        <button type="button" data-js="bt8">8</button>
-        <button type="button" data-js="bt9">9</button>
       </form>
     </main>
   </body>
