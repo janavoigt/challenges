@@ -78,7 +78,9 @@ const animals = [
 ];
 
 // Hint: Besides the array method, check out the string method `startsWith()`.
-const firstAnimalStartingWithLetterG = null;
+const firstAnimalStartingWithLetterG = animals.find((animal) =>
+  animal.startsWith("g")
+);
 
 const indexOfAnimalWithNameLongerFive = null;
 
