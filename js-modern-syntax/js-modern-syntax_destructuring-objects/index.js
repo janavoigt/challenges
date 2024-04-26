@@ -51,9 +51,9 @@ const person = {
   firstName: "Alex",
 };
 
-export const { lastName: personLastName, ...moreInfor } = person;
+//export const { lastName: personLastName, ...moreInfor } = person;
 
-console.log(personLastName, moreInfor);
+//console.log(personLastName, moreInfor);
 
 // EXERCISE 5
 // Rewrite the following function (logInfo) to use destructuring assignment for the three variables it creates:
@@ -69,14 +69,15 @@ const logInfo = (city) => {
 const destructuringLogInfo = (city) => {
   // (Hint: Lines 48-50 should be replaced with a single line and you shouldn't change anything else).
   // your code here
-
+  const { name, country, population: numPeople } = city;
   // your code here
   return `${name} is in ${country} and has ${numPeople} inhabitants in it.`;
 };
 
-// This is how you would call it:
-destructuringLogInfo({
-  name: "Marseille",
-  country: "France",
-  population: 861635,
-});
+console.log(
+  destructuringLogInfo({
+    name: "Marseille",
+    country: "France",
+    population: 861635,
+  })
+);
