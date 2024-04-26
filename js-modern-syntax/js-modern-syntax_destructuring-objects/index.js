@@ -10,6 +10,10 @@ const company = {
   location: "Berlin",
 };
 
+//export const { name, ...theRestOfTheCompany } = company;
+
+//console.log(name, theRestOfTheCompany);
+
 // example: export const {value1} = myObject;
 
 // EXERCISE 2
@@ -19,7 +23,10 @@ const company = {
 //  2.2: 'years' property into the variable 'age'.
 //  2.3: 'isAdmin' property into the variable 'isAdmin' (false, if no such property exists)
 
-const user = { name: "John", years: 30 };
+let user = { name: "John", years: 30 };
+
+//export const { name, years: age, isAdmin } = user;
+//console.log(name, age, isAdmin);
 
 // EXERCISE 3
 // Extract the variables from the dog object and
@@ -31,6 +38,9 @@ const dog = {
   age: 5,
 };
 
+//export const { name: dogName, breed: dogBreed, age: dogAge } = dog;
+//console.log(dogName, dogBreed, dogAge);
+
 // EXERCISE 4
 // Extract the 'lastName' property from the person object as "personLastName".
 // Store all other properties in an object called "moreInformation".
@@ -41,6 +51,10 @@ const person = {
   firstName: "Alex",
 };
 
+export const { lastName: personLastName, ...moreInfor } = person;
+
+console.log(personLastName, moreInfor);
+
 // EXERCISE 5
 // Rewrite the following function (logInfo) to use destructuring assignment for the three variables it creates:
 
@@ -49,17 +63,20 @@ const logInfo = (city) => {
   const country = city.country;
   const numPeople = city.population;
 
-  return `${name} is in ${country} and has ${numPeople} inhabitants in it.`
-}
+  return `${name} is in ${country} and has ${numPeople} inhabitants in it.`;
+};
 
 const destructuringLogInfo = (city) => {
   // (Hint: Lines 48-50 should be replaced with a single line and you shouldn't change anything else).
   // your code here
 
-
   // your code here
-  return `${name} is in ${country} and has ${numPeople} inhabitants in it.`
-}
+  return `${name} is in ${country} and has ${numPeople} inhabitants in it.`;
+};
 
 // This is how you would call it:
- destructuringLogInfo({ name: "Marseille", country: "France", population: 861635 });
+destructuringLogInfo({
+  name: "Marseille",
+  country: "France",
+  population: 861635,
+});
