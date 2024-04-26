@@ -34,7 +34,12 @@ const EXAMPLE_DATA = {
 };
 
 // Create dom element for a card and append it to the root
+const main = document.querySelector('main')
+
 const firstCard = Card(EXAMPLE_DATA);
+main.append(firstCard)
+
+
 renderElement(firstCard);
 
 fetchDataAndRender();
