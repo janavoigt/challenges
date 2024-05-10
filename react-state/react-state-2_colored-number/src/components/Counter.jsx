@@ -1,8 +1,10 @@
+import { useState } from "react";
 import ColoredNumber from "./ColoredNumber";
 import "./Counter.css";
 
-
 export default function Counter() {
+  const [counterNumber, servCounterNumber] = useState();
+
   return (
     <div className="counter">
       <h1>Colored Number</h1>
