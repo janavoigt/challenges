@@ -1,0 +1,118 @@
+:root {
+  /* Used for texts (+ footer background) */
+  --color-granite: #252629;
+  /* Used for backgrounds (+ footer text color) */
+  --color-foam: #ffffff;
+  /* Used for buttons, icons, etc. */
+  --color-nemo: #ff4a11;
+  /* active color for buttons, icons, etc. */
+  --color-nemo-mid: #ff5c29;
+  /* hover color for buttons, icons, etc. */
+  --color-nemo-dark: #e5430f;
+  /* Used for borders and some backgrounds */
+  --color-water-10: #e4e8f0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* height: 100vh; */
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: var(--color-foam);
+}
+
+.header_title {
+  padding: 18px;
+  background-color: rgb(157, 153, 153);
+  color: var(--color-granite);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: medium;
+}
+
+.footer__text {
+  padding: 18px;
+  background-color: var(--color-granite);
+  color: var(--color-foam);
+  text-align: center;
+  font-size: medium;
+  margin-bottom: 0%;
+}
+.form__title {
+  margin: auto;
+  padding-top: 25px;
+  text-align: center;
+}
+
+.form__container {
+  margin: auto;
+  padding: 20px;
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 15px;
+  text-align: start;
+  align-items: center;
+}
+
+.form_input__name {
+  height: 70px;
+}
+
+.form_button__submit {
+  background-color: var(--color-nemo);
+  color: var(--color-foam);
+  height: 40px;
+  width: 100px;
+  border-radius: 8px;
+  font-size: medium;
+}
+
+.tab__bar {
+  width: 100%;
+  display: flex;
+  gap: 32px;
+}
+
+.tab {
+  border: none;
+  background-color: unset;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  transition: background-color 0.2s ease-in-out;
+  background-color: transparent;
+  margin: -10px -16px;
+  padding: 10px 16px;
+  border-radius: 999px;
+}
+
+.tab:hover {
+  background-color: var(--color-nemo);
+}
+
+.tab:active {
+  background-color: var(--color-water-10);
+}
+.tab--active {
+  color: var(--color-nemo-mid);
+}
+
+.badge {
+  display: inline-block;
+  font-size: 12px;
+  padding: 2px 9px;
+  border-radius: 999px;
+  background-color: var(--color-water-10);
+  color: var(--color-granite);
+  font-weight: 400;
+}
+
+.badge--active {
+  background-color: var(--color-water-10);
+  color: var(--color-granite);
+}
