@@ -3,14 +3,15 @@ import ColoredNumber from "./ColoredNumber";
 import "./Counter.css";
 
 export default function Counter() {
-  const [counterNumber, servCounterNumber] = useState();
+  let [counterNumber, servCounterNumber] = useState(0);
 
   return (
     <div className="counter">
       <h1>Colored Number</h1>
-      <ColoredNumber value={0} />
+      <ColoredNumber value={counterNumber} />
       <div className="counter__buttons-container">
         <button
+          onClick={() => servCounterNumber(++counterNumber)}
           type="button"
           className="counter__button"
           aria-label="increment count"
@@ -18,6 +19,7 @@ export default function Counter() {
           +
         </button>
         <button
+          onClick={() => servCounterNumber(--counterNumber)}
           type="button"
           className="counter__button"
           aria-label="decrement count"
