@@ -19,7 +19,9 @@ export default function Counter() {
           +
         </button>
         <button
-          onClick={() => servCounterNumber(--counterNumber)}
+          onClick={() =>
+            servCounterNumber(--counterNumber && counterNumber > 0)
+          }
           type="button"
           className="counter__button"
           aria-label="decrement count"
