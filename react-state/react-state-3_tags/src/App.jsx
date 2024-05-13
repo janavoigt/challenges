@@ -2,23 +2,22 @@ import { useState } from "react";
 import Form from "./components/Form";
 import List from "./components/List";
 import "./App.css";
-import { uid } from "uid";
 
 export default function App() {
   const [tags, setTags] = useState(["JavaScript", "React", "CSS", "HTML"]);
 
   function handleAddTag(newTag) {
-    setTags([...tags, { id: uid(), ...newTag }]);
+    setTags([...tags, newTag]);
   }
 
   function handleDeleteTag(tagToDelete) {
-    setTags(tags.filter((tag) => tag.id != tagToDelete));
+    setTags(tags.filter((tag) => tag != tagToDelete));
   }
 
   return (
     <main className="app">
       <Form onAddTag={handleAddTag} />
-      <List tags={tags} />
+      <List tags={tags} onDeleteTag={handleDeleteTag} />
     </main>
   );
 }
