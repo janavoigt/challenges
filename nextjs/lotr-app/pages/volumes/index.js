@@ -1,10 +1,12 @@
 import React from "react";
-import { volumes } from "../../data/data.js";
-import { introduction } from "../../data/data.js";
+import { volumes } from "../../lib/data.js";
+import { introduction } from "../../lib/data.js";
 import Head from "next/head";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function AllVolumes() {
+  const router = useRouter();
   return (
     <>
       <Head>
@@ -13,7 +15,7 @@ export default function AllVolumes() {
       <main>
         <h1>Lord of the Rings</h1>
         <p>{introduction}</p>
-        <h2>All volumes</h2>
+        <h2>All Volumes </h2>
 
         <section>
           <ul>
@@ -23,9 +25,9 @@ export default function AllVolumes() {
                   <li>
                     <Link
                       key={index}
-                      href={`/pages/volumes/${volume.slug.toLowerCase()}`}
+                      href={`./volumes/${volume.slug.toLowerCase()}`}
                     >
-                      <text>{volume.title}</text>
+                      {volume.title}
                     </Link>
                   </li>
                 </>

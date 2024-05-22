@@ -1,5 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import Navigation from ".";
+import HistoryEntry from "../HistoryEntry";
+import HistoryPage from "@/pages/history";
+import GameForm from "../GameForm";
 
 jest.mock("next/router", () => ({
   useRouter() {
@@ -7,4 +10,6 @@ jest.mock("next/router", () => ({
   },
 }));
 
-test("renders with two links 'Play' and 'History'", () => {});
+test("renders with two links 'Play' and 'History'", () => {
+  render(<Navigation navigation={players} />);
+});
