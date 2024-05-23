@@ -17,20 +17,13 @@ export default function CarRace() {
 
   function moveCar(clickedCar) {
     const coveredDistance = getRandomDistance();
-    updateCars((prevCars) =>
-      prevCars.map((car) =>
-        car.emoji === clickedCar.emoji
-          ? {
-              ...car,
-              position: {
-                ...car.position,
-                x: car.position + coveredDistance,
-                lastDistance: coveredDistance,
-              },
-            }
-          : car
-      )
-    );
+
+    updateCars((draft) => {
+      const car = draft.find((car) => car.emoji === clickedCar.emoji);
+      car.position.x = car.position.x + coveredDistance;
+      car.position.lastDistance = coveredDistance;
+    });
+
     // car.position.x = coveredDistance + car.position.x;
     // lastDistance = coveredDistance;
     // console.log("clickedCar", clickedCar);
