@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Light from "../Light";
+import lightsStore from "@/components/lightsStore";
 
 const StyledLights = styled.ul`
   list-style-type: none;
@@ -12,32 +13,21 @@ const StyledLights = styled.ul`
 `;
 
 export default function Lights() {
+  const lights = lightsStore((state) => state.lights);
+  const onToggle = lightsStore((state) => state.toggleLight);
   return (
     <StyledLights>
-      <li>
-        <Light name="Living Room" />
-      </li>
-      <li>
-        <Light name="Kitchen" />
-      </li>
-      <li>
-        <Light name="Bedroom" />
-      </li>
-      <li>
-        <Light name="Bathroom" />
-      </li>
-      <li>
-        <Light name="Garage" />
-      </li>
-      <li>
-        <Light name="Porch" />
-      </li>
-      <li>
-        <Light name="Garden" />
-      </li>
-      <li>
-        <Light name="Office" />
-      </li>
+      {lights.map((light) => {
+        return (
+          <li key={light.id}>
+            <Light
+              name={light.name}
+              isOn={light.isOn}
+              onToggle={() => onToggle(light.id)}
+            />
+          </li>
+        );
+      })}
     </StyledLights>
   );
 }
