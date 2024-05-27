@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Button from "../Button";
+import lightsStore from "@/components/lightsStore";
 
 const StyledQuickActions = styled.div`
   display: flex;
@@ -8,12 +9,15 @@ const StyledQuickActions = styled.div`
 `;
 
 export default function QuickActions() {
+  const turnAllOn = lightsStore((state) => state.turnAllOn);
+  const turnAllOff = lightsStore((state) => state.turnAllOff);
+
   return (
     <StyledQuickActions>
       <Button
         type="button"
         onClick={() => {
-          console.log("Turn all lights off");
+          turnAllOff();
         }}
       >
         Turn all lights off
@@ -21,7 +25,7 @@ export default function QuickActions() {
       <Button
         type="button"
         onClick={() => {
-          console.log("Turn all lights on");
+          turnAllOn();
         }}
       >
         Turn all lights on
