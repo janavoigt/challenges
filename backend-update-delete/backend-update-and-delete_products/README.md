@@ -69,7 +69,7 @@ You will need the `mutate` method to revalidate the product data after a success
 
 - destructure mutate from the object received from the `useSWR` hook.
 
-Below this code, create a `handleEditProduct()` function:
+Below this code, create a ` ` function:
 
 - it receives `event` as parameter,
 - it stores the submitted data in a variable called `productData` (Hint: `new FormData` and `Object.fromEntries` as already used)
