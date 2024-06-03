@@ -3,10 +3,11 @@ import dbConnect from "@/db/models/dbConnect";
 
 export default async function handler(request, response) {
   const { id } = request.query;
+
   await dbConnect();
 
   if (request.method === "GET") {
-    const product = await Product.findById(id);
+    const product = await Product.findById(id).populate("reviews");
     return response.status(200).json(product);
   }
 }
