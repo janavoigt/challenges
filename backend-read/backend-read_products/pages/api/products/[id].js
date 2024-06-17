@@ -1,13 +1,22 @@
-import { products } from "../../../lib/products";
+import Product from "@/db/models/Products";
+import dbConnect from "@/db/models/dbConnect";
 
-export default function handler(request, response) {
+export default async function handler(request, response) {
   const { id } = request.query;
 
-  const product = products.find((product) => product.id === id);
+  await dbConnect();
 
-  if (!product) {
-    return response.status(404).json({ status: "Not Found" });
+  if (request.method === "GET") {
+    const product = await Product.findById(id).populate("reviews");
+    return response.status(200).json(product);
   }
-
-  response.status(200).json(product);
 }
+
+//   const product = products.find((product) => product.id === id);
+
+//   if (!product) {
+//     return response.status(404).json({ status: "Not Found" });
+//   }
+
+//   response.status(200).json(product);
+// }
