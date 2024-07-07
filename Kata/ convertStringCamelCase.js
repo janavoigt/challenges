@@ -11,16 +11,25 @@
 let string = "The_Stealth-Warrior";
 
 function toCamelCase(str) {
-  str = str.split("");
   return str
-    .map((el, i) => {
-      if (el === "-" || el === "_") {
-        el = str[i + 1].toUpperCase();
-        str.splice(i + 1, 1);
-      }
-      return el;
-    })
-    .join("");
+    .split(/[-_]/g)
+    .map((word, index) =>
+      index === 0 ? word : `${word.charAt(0).toUpperCase()}${word.slice(1)}`
+    )
+    .join(" ");
+
+  //   str = str.split("");
+  //   return str
+  //     .map((el, i) => {
+  //       if (el === "-" || el === "_") {
+  //         el = str[i + 1].toUpperCase();
+  //         str.splice(i + 1, 1);
+  //       }
+  //       return el;
+  //     })
+  //     .join("");
 }
 
-toCamelCase(string);
+console.log(toCamelCase("the-stealth-warrior"));
+console.log(toCamelCase("The_Stealth_Warrior"));
+console.log(toCamelCase("The_Stealth-Warrior"));
